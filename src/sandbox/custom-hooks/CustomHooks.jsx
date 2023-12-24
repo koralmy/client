@@ -8,11 +8,8 @@ const CustomHooks = () => {
     <>
       <AppBar position="static" color="transparent">
         <Toolbar>
-          <NavItem
-            label="Custom Counter Hook"
-            to="custom-counter"
-            color="black"
-          />
+          <NavItem label="Custom Counter Hook" to="custom-counter" color="black" />
+          <NavItem label="Custom Name Hook" to="custom-name" color="black" />
         </Toolbar>
       </AppBar>
 
