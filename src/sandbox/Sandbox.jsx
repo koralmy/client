@@ -1,6 +1,6 @@
 import Loops from "./Loops";
 import OnClick from "./events/Onclick";
-import SetPost from "./hooks/SetPost";
+import SetPosts from "./hooks/SetPosts";
 import UseStateWithFunction from "./hooks/UseStateWithFunction";
 import UseStateWithObject from "./hooks/UseStateWithObject";
 import MuiSandbox from "./mui-sandbox/MuiSandbox";
@@ -31,8 +31,17 @@ const Sandbox = () => (
   <>
     <AppBar position="static" color="transparent">
       <Toolbar>
-        <NavItem label="Loops" to="loops" color="black"></NavItem>
-        <NavItem label="Use State" to="useState" color="black"></NavItem>
+        <NavItem label="Hooks 🪝" to="hooks" color="black"></NavItem>
+        <NavItem
+          label="LifeCycle Hooks 🪝"
+          to="life-cycle-hooks"
+          color="black"
+        ></NavItem>
+        <NavItem
+          label="Custom Hooks 🪝"
+          to="custom-hooks"
+          color="black"
+        ></NavItem>
       </Toolbar>
     </AppBar>
 

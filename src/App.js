@@ -7,7 +7,7 @@ import CardsPage from "./cards/pages/CardsPage";
 import AboutPage from "./pages/AboutPage";
 import UseState from "./sandbox/hooks/UseState";
 import CardComponen from "./sandbox/mui-sandbox/CardComponent"
-import SetPost from "./sandbox/hooks/SetPost";
+import SetPosts from "./sandbox/hooks/SetPosts";
 import Layout from "./layout/Layout";
 import { BrowserRouter } from "react-router-dom";
 import Router from "./routes/Router";

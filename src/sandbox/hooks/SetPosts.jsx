@@ -11,12 +11,11 @@ import {
   Paper,
 } from "@mui/material";
 
-const SetPost = () => { 
+const SetPost = () => {
   const INITIAL_POST = {
     title: "",
     subtitle: "",
     author: "",
-    createdAt: "",
   };
 
   const [post, setPost] = useState(INITIAL_POST);
@@ -30,6 +29,11 @@ const SetPost = () => {
   const handleSubmit = () => {
     setPosts([...posts, post]);
     setPost(INITIAL_POST);
+    setPosts([
+      ...posts,
+      { ...post, createdAt: new Date().toLocaleString() },
+    ]);
+
   };
 
   return (
@@ -65,14 +69,6 @@ const SetPost = () => {
           value={post.author}
           onChange={handleInputChange}
           label="Author"
-        />
-        <TextField
-          style={{ marginBottom: "10px" }}
-          type="text"
-          name="createdAt"
-          value={post.createdAt}
-          onChange={handleInputChange}
-          label="Created At"
         />
         <Button variant="contained" color="primary" onClick={handleSubmit}>
           Add Post
