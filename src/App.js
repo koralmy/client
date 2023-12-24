@@ -1,13 +1,12 @@
 import "./App.css";
+import CardComponent from "./cards/components/card/Card";
 import PageHeader from "./components/PageHeader";
 import Sandbox from "./sandbox/Sandbox";
-import Cards from "./cards/components/Card"
+import Cards from "./cards/components/Cards";
 import OnClick from "./sandbox/events/Onclick";
 import CardsPage from "./cards/pages/CardsPage";
 import AboutPage from "./pages/AboutPage";
 import UseState from "./sandbox/hooks/UseState";
-import CardComponen from "./sandbox/mui-sandbox/CardComponent"
-import SetPosts from "./sandbox/hooks/SetPosts";
 import Layout from "./layout/Layout";
 import { BrowserRouter } from "react-router-dom";
 import Router from "./routes/Router";

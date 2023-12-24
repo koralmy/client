@@ -1,7 +1,7 @@
 import Container from "@mui/material/Container";
 import PageHeader from "../../components/PageHeader";
 
-import Cards from "../components/Card";
+import Cards from "../components/Cards";
 
 const CardsPage = () => {
   const cards = [
