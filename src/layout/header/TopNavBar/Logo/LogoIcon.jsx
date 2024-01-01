@@ -11,7 +11,7 @@ const LogoIcon = () => {
         color: "inherit",
       }}
     >
-      <Avatar alt="me" src="public\assets\images\buisnes-card.png"></Avatar>
+      <Avatar alt="me" src="../../../../../public/assets/images/avater.png" ></Avatar>
     </IconButton>
   );
 };

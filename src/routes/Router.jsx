@@ -19,6 +19,10 @@ import UseEffectNoDependencies from '../sandbox/life-cycle-hooks/UseEffectNoDepe
 import CustomHooks from '../sandbox/custom-hooks/CustomHooks';
 import CustomCounterHook from '../sandbox/custom-hooks/CustomCounterHook';
 import CustomNameHook from '../sandbox/custom-hooks/CustomNameHook';
+import Memoization from "../sandbox/memoization/Memoization";
+import UseCallBack from "../sandbox/memoization/use-callback/UseCallback";
+import UseMemo from "../sandbox/memoization/use-callback/UseMemo";
+
 
 
 const Router = () => {
@@ -46,6 +50,11 @@ const Router = () => {
                 <Route path="custom-hooks" element={<CustomHooks />}>
                     <Route path="custom-counter" element={<CustomCounterHook />}></Route>
                     <Route path="custom-name" element={<CustomNameHook />}></Route>
+                </Route>
+
+                <Route path="memoization" element={<Memoization />}>
+                    <Route path="use-callback" element={<UseCallBack />}></Route>
+                    <Route path="use-memo" element={<UseMemo />}></Route>
                 </Route>
 
 
