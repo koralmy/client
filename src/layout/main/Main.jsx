@@ -1,15 +1,18 @@
-import { node } from "prop-types";
-import { Box } from "@mui/material";
+
+import { node } from "prop-types"
+import { Box } from "@mui/material"
+import { useTheme } from "../../providers/ThemeProvider";
 
 const Main = ({ children }) => {
-  return (
-    <Box sx={{ minHeight: "90vh", backgroundColor: "lightgray" }}>
-      {children}
-    </Box>
-  );
-};
+    const { isDark } = useTheme();
+    return (
+        <Box sx={{ minHeight: "90vh", backgroundColor: isDark ? "#333333" : "#e3f2fd" }}>
+            {children}
+        </Box>
+    )
+}
 
 Main.propTypes = {
-  children: node.isRequired,
-};
-export default Main;
+    children: node.isRequired
+}
+export default Main
