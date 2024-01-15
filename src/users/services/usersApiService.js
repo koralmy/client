@@ -12,3 +12,11 @@ export const login = async (user) => {
     return Promise.reject(error.message);
   }
 };
+export const signup = async (user) => {
+  try {
+    const { data } = await axios.post(`${apiUrl}`, user);
+    return data;
+  } catch (error) {
+    return Promise.reject(error.message);
+  }
+};

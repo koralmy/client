@@ -12,7 +12,7 @@ import { BrowserRouter } from "react-router-dom";
 import Router from "./routes/Router";
 import { SnackbarProvider } from "./providers/SnackbarProvider";
 import { ThemeProvider } from "./providers/ThemeProvider";
-import {UserProvider} from "../src/users/providers/UserProvider";
+import { UserProvider } from "./users/providers/UserProvider";
 
 function App() {
   return (
