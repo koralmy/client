@@ -7,7 +7,7 @@ import ROUTES from "../../../routes/routesModel";
 
 const CardComponent = ({
   card,
-  handleDeleteCard,
+  onDeleteCard,
   handleLikeCard,
   handleEditCard,
 }) => {
@@ -21,7 +21,7 @@ const CardComponent = ({
         <CardBody card={card} />
       </CardActionArea>
       <CardActionBar
-        {...{ handleDeleteCard, handleLikeCard, handleEditCard, card }}
+        {...{ onDeleteCard, handleLikeCard, handleEditCard, card }}
       />
     </Card>
   );
