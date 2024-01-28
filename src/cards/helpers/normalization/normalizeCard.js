@@ -1,3 +1,4 @@
+// from flat card to card with nested objects
 export const normalizeCard = (card) => ({
   title: card.title,
   subtitle: card.subtitle,

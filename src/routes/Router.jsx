@@ -18,19 +18,20 @@ import UseEffectAsComponentWillUnmount from "../sandbox/life-cycle-hooks/UseEffe
 import UseEffectNoDependencies from "../sandbox/life-cycle-hooks/UseEffectNoDependancies";
 import CustomHooks from "../sandbox/custom-hooks/CustomHooks";
 import CustomCounterHook from "../sandbox/custom-hooks/CustomCounterHook";
-import CustomNameHook from "../sandbox/custom-hooks/CustomNameHook";
 import Memoization from "../sandbox/memoization/Memoization";
 import UseCallBack from "../sandbox/memoization/use-callback/UseCallback";
 import UseMemo from "../sandbox/memoization/use-callback/UseMemo";
-
 import A from "../sandbox/context/components/A";
 import FormTest from "../sandbox/forms/FormTest";
 import MyCardsPage from "../cards/pages/MyCardsPage";
 import CreateCardPage from "../cards/pages/CreateCardPage";
+import EditCardPage from "../cards/pages/EditCardPage";
+import FavCardsPage from "../cards/pages/FavCardsPage";
 
 const Router = () => {
   return (
     <Routes>
+      <Route path={ROUTES.FAV_CARDS} element={<FavCardsPage />}></Route>
       <Route path={ROUTES.CREATE_CARD} element={<CreateCardPage />}></Route>
       <Route path={ROUTES.MY_CARDS} element={<MyCardsPage />}></Route>
       <Route path={ROUTES.ABOUT} element={<AboutPage />}></Route>
@@ -39,7 +40,10 @@ const Router = () => {
         path={`${ROUTES.CARD_DETAILS}/:id`}
         element={<CardDetailsPage />}
       ></Route>
-
+      <Route
+        path={`${ROUTES.EDIT_CARD}/:id`}
+        element={<EditCardPage />}
+      ></Route>
       <Route path={ROUTES.SIGNUP} element={<SignupPage />}></Route>
       <Route path={ROUTES.LOGIN} element={<LoginPage />} />
 
@@ -68,14 +72,11 @@ const Router = () => {
         </Route>
         <Route path="custom-hooks" element={<CustomHooks />}>
           <Route path="custom-counter" element={<CustomCounterHook />}></Route>
-          <Route path="custom-name" element={<CustomNameHook />}></Route>
         </Route>
-
         <Route path="memoization" element={<Memoization />}>
           <Route path="use-callback" element={<UseCallBack />}></Route>
           <Route path="use-memo" element={<UseMemo />}></Route>
         </Route>
-
         <Route path="loops" element={<Loops />}></Route>
         <Route path="context" element={<A />}></Route>
         <Route path="form" element={<FormTest />}></Route>

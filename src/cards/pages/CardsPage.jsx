@@ -5,7 +5,7 @@ import CardsFeedback from "../components/CardsFeedback";
 import useCards from "../hooks/useCards";
 const CardsPage = () => {
   const {
-    value: { cards, error, isPending },
+    value: { cards, error, isPending, filteredCards },
     handleGetCards,
     handleDeleteCard,
     handleGetMyCards,
@@ -21,6 +21,10 @@ const CardsPage = () => {
     await handleGetMyCards();
   };
 
+  useEffect(() => {
+    console.log(filteredCards);
+  }, [filteredCards]);
+
   return (
     <Container>
       <PageHeader
@@ -30,7 +34,7 @@ const CardsPage = () => {
       <CardsFeedback
         isPending={isPending}
         error={error}
-        cards={cards}
+        cards={filteredCards}
         onDeleteCard={onDeleteCard}
       />
     </Container>
