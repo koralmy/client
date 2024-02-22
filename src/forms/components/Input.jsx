@@ -12,11 +12,13 @@ const Input = ({
   required,
   error,
   handleChange,
+  placeholder,
   ...rest
 }) => {
   return (
     <Grid item xs={12} {...rest}>
       <TextField
+        placeholder={placeholder}
         variant={variant}
         label={makeFirstLetterCapital(label)}
         type={type}

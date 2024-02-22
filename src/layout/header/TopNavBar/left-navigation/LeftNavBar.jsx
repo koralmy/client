@@ -7,6 +7,22 @@ import { useUser } from "../../../../users/providers/UserProvider";
 
 const LeftNavBar = () => {
   const { user } = useUser();
+
+  const routes = [
+    {
+      label: "Cards",
+      route: ROUTES.CARDS,
+    },
+    {
+      label: "Fav Cards",
+      route: ROUTES.FAV_CARDS,
+    },
+    {
+      label: "My Cards",
+      route: ROUTES.MY_CARDS,
+    },
+  ];
+
   return (
     <Box>
       <LogoIcon />
@@ -14,12 +30,15 @@ const LeftNavBar = () => {
 
       <Box sx={{ display: { xs: "none", md: "inline-flex" } }}>
         <NavItem label="About" to={ROUTES.ABOUT}></NavItem>
-        {user && user.isBusiness && (
-          <>
-            <NavItem label="My Cards" to={ROUTES.MY_CARDS}></NavItem>
-            <NavItem label="Fav Cards" to={ROUTES.FAV_CARDS}></NavItem>
-          </>
-        )}
+        {user &&
+          user.isBusiness &&
+          routes.map((element) => (
+            <NavItem
+              key={element.label}
+              label={element.label}
+              to={element.route}
+            />
+          ))}
         {user && user.isAdmin && (
           <NavItem label="Sandbox 🧃" to={ROUTES.SANDBOX}></NavItem>
         )}

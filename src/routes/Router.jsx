@@ -68,7 +68,7 @@ const Router = () => {
           <Route
             path="useEffect-did-update-no-deps"
             element={<UseEffectNoDependencies />}
-          ></Route>
+          />
         </Route>
         <Route path="custom-hooks" element={<CustomHooks />}>
           <Route path="custom-counter" element={<CustomCounterHook />}></Route>
